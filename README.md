@@ -2,13 +2,13 @@
 
 ```
 
-composer require yii2-login dev-master
+composer require yii2-showsql/showsql
 
 或者在composer.json中加入
 
  "require": {
 
-        "yii2-login": "dev-master"
+        "yii2-showsql": "dev-master"
 }
 
 ```
