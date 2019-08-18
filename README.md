@@ -20,47 +20,23 @@ composer require yii2-login dev-master
 
 ```
 
-public function actionIndex()
-    {
-        /*$auth = EasyAuth::getInstance('qq');
-        $auth->setAppKey('*');
-        $auth->setAppSecret('*');
-        $auth->setCallback('http:/域名/login/callback?type=qq');
-        \Yii::$app->response->redirect($auth->getRequestCodeURL());*/
-        $auth = EasyAuth::getInstance('weixin');
-        $auth->setAppKey('*');
-        $auth->setAppSecret('*');
-        $auth->setCallback('http:/域名/login/callback?type=wx');
-        \Yii::$app->response->redirect($auth->getRequestCodeURL());
-    }
-    //回调方法
-    public function actionCallback()
-    {
-
-        $code  =  \Yii::$app->request->get('code');
-        $state =  \Yii::$app->request->get('state');
-        $type = \Yii::$app->request->get('type');
-        if($type == 'qq'){
-
-            $auth = EasyAuth::getInstance('qq');
-            $auth->setAppKey('*');
-            $auth->setAppSecret('*');
-            $auth->getAccessToken($code);
-
-            $result = $auth->getUserInfo('oauth2.0/me');
-
-        }else if($type == 'wx'){
-
-            $auth = EasyAuth::getInstance('weixin');
-            $auth->setAppKey('*');
-            $auth->setAppSecret('*');
-            $auth->getAccessToken($code);
-
-            $result = $auth->getUserInfo('sns/userinfo');
-
-        }
-
-    }
+'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'targets' => [
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning'],
+                ],
+                [
+                    //日志记录方式 加入这段配置
+                    'class' => 'easy\debug\utils\LogTarget',
+                    'levels' => ['info','error', 'warning'],//日志等级
+                    'logVars' =>['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION','_SERVER'],//被收集记录的额外数据如 'logVars' => ['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION','_SERVER'],
+                    //指定日志目录
+                    'logFile' => '@app/runtime/logs/info.log',
+                ],
+            ],
+        ],
 
 ```
 
