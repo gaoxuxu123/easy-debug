@@ -1,7 +1,7 @@
 {
-  "name": "yii2-login/login",
+  "name": "yii2-showsql/showsql",
   "type": "library",
-  "description": "yii2框架debug扩展。",
+  "description": "yii2框架sql调试展示。",
   "keywords": ["Yii2", "Yii","debug"],
   "homepage": "https://github.com/gaoxuxu123/easy-debug",
   "license": "MIT",
