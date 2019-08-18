@@ -1,0 +1,62 @@
+#parentDIV {
+    height: auto;
+}
+#suspensionBox {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    text-align: center;
+    -webkit-text-fill-color: white;
+    border-radius: 50px;
+    filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6;
+    cursor: pointer;
+}
+.content-tips{
+
+    margin-top: 15px;
+}
+.scrollTop{
+    position:fixed;
+    right: 0px;
+    bottom: 100px;
+}
+#content-box{
+
+    width: 800px;
+    height: 500px;
+    background-color: black;
+    -webkit-text-fill-color: white;
+    filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8;
+    word-wrap:break-word
+}
+.x-right{
+
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.content{
+    position:fixed;
+    right: 30%;
+    bottom: 100px;
+}
+ul li{ list-style: none;}
+ul li input{ display: none;}
+ul li label{ float: left; width: 100px; text-align: center; line-height: 50px;  border-right: 0; box-sizing: border-box; cursor: pointer; transition: all .3s;}
+ul li input:checked+label{ color: #fff; background-color: #000;}
+ul li:last-child label{ border-right: 1px solid #000;}
+ul li .content{
+    opacity: 0;
+    visibility:hidden;
+    position: absolute;
+    left: 70px; top: 100px; width: 80%;
+    height: 400px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #fff;
+    transition: all .3s;
+}
+
+ul li:nth-child(1) .tab1{ background-color: #0f0;}
+ul li input:checked~.content{ opacity: 1; visibility:visible;}

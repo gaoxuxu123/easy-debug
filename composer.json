@@ -1,0 +1,24 @@
+{
+  "name": "yii2-login/login",
+  "type": "library",
+  "description": "yii2框架debug扩展。",
+  "keywords": ["Yii2", "Yii","debug"],
+  "homepage": "https://github.com/gaoxuxu123/easy-debug",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "moxiaoxuancc",
+      "email": "moxiaoxuancc@126.com"
+    }
+  ],
+  "require": {
+
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "easy\\debug\\": "/"
+    }
+  },
+  "minimum-stability": "stable"
+}
