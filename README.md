@@ -54,4 +54,9 @@ if (YII_DEBUG) {
 		
 
 ```
+##效果图
+![image](https://github.com/gaoxuxu123/easy-debug/blob/master/assets/img/1.png)
+![image](https://github.com/gaoxuxu123/easy-debug/blob/master/assets/img/2.png)
+![image](https://github.com/gaoxuxu123/easy-debug/blob/master/assets/img/3.png)
+
 
